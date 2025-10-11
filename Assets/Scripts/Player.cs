@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = move < 0; // voltea el sprite en lugar de escalarlo
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
         {
             rbd2D.linearVelocity = new Vector2(rbd2D.linearVelocity.x, jumpForce);
         }
