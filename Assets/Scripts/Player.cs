@@ -6,6 +6,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rbd2D;
     private float move;
     private SpriteRenderer spriteRenderer;
+    private float jumpForce = 8;
+    private bool isGrounded;
+    public Transform groundCheck;
+    public float groundRadius = 0.1f;
+    public LayerMask groundLayer;
 
     void Start()
     {
@@ -22,5 +27,15 @@ public class Player : MonoBehaviour
         {
             spriteRenderer.flipX = move < 0; // voltea el sprite en lugar de escalarlo
         }
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rbd2D.linearVelocity = new Vector2(rbd2D.linearVelocity.x, jumpForce);
+        }
+    }
+
+    private void FixedUpdate() 
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
     }
 }
