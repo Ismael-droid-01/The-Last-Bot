@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1535dff47d61969428edca30149f6f83
+guid: 2ab857c521bf2ca4fb358269c53f1e74
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7104116617905695988
-    second: skeleton-00_idle_00_0
+      213: -6553273607162281350
+    second: skeleton-01_run_01start_17_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skeleton-00_idle_00_0
+      name: skeleton-01_run_01start_17_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 0
-        width: 297
-        height: 567
+        x: 180
+        y: 33
+        width: 325
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0318c2439b196d90800000000000000
-      internalID: -7104116617905695988
+      spriteID: a72462100681e05a0800000000000000
+      internalID: -6553273607162281350
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      skeleton-00_idle_00_0: -7104116617905695988
+      skeleton-01_run_01start_17_0: -6553273607162281350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

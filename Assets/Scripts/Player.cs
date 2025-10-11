@@ -11,11 +11,13 @@ public class Player : MonoBehaviour
     public Transform groundCheck;
     public float groundRadius = 0.1f;
     public LayerMask groundLayer;
+    private Animator animator;
 
     void Start()
     {
         rbd2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -32,6 +34,10 @@ public class Player : MonoBehaviour
         {
             rbd2D.linearVelocity = new Vector2(rbd2D.linearVelocity.x, jumpForce);
         }
+
+        animator.SetFloat("Speed", Mathf.Abs(move));
+        animator.SetFloat("VerticalVelocity", rbd2D.linearVelocity.y);
+        animator.SetBool("IsGrounded", isGrounded);
     }
 
     private void FixedUpdate() 
