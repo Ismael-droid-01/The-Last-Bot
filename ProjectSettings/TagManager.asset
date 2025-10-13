@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Hammer
+  - Entry
   layers:
   - Default
   - TransparentFX
