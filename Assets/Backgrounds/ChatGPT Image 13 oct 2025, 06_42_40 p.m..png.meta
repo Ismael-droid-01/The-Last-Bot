@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fd6e42e05b1624b4a99cfc90f7ed563f
+guid: 6d7f9fec77c7fd648ab111494563f1df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4358547178182735663
-    second: Door 2_0
+      213: -4362056572567453106
+    second: ChatGPT Image 13 oct 2025, 06_42_40 p.m._0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door 2_0
+      name: ChatGPT Image 13 oct 2025, 06_42_40 p.m._0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 1536
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d803ab1f645383c0800000000000000
-      internalID: -4358547178182735663
+      spriteID: e4285fd88acd673c0800000000000000
+      internalID: -4362056572567453106
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Door 2_0: -4358547178182735663
+      ChatGPT Image 13 oct 2025, 06_42_40 p.m._0: -4362056572567453106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

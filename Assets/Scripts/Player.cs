@@ -4,7 +4,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 7f;
+    public float speed = 8f;
     private Rigidbody2D rbd2D;
     private float move;
     private SpriteRenderer spriteRenderer;
@@ -17,27 +17,17 @@ public class Player : MonoBehaviour
     public TMP_Text textLives;
     private int lives;
 
-
-    private bool isKO = false; // Controla si está en animación KO
-
     void Start()
     {
         rbd2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        lives = 3;
+        lives = 100;
         textLives.text = lives.ToString();
     }
 
     void Update()
     {
-        if (isKO)
-        {
-            // Bloquea movimiento y salto;
-            rbd2D.linearVelocity = Vector2.zero;
-            return;
-        }
-
         move = Input.GetAxisRaw("Horizontal");
         rbd2D.linearVelocity = new Vector2(move * speed, rbd2D.linearVelocity.y);
 
@@ -63,16 +53,13 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Hammer") || collision.CompareTag("Entry"))
         {
-            animator.SetTrigger("KO");
-            isKO = true;
-
             if (lives == 1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
             else
             {
-                Destroy(collision.gameObject);
+                // Destroy(collision.gameObject);
                 lives--;
                 textLives.text = lives.ToString();
             }
@@ -82,11 +69,5 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Ha llegado al final");
         }
-    }
-
-    // Llamar desde el final de la animación KO
-    public void RecoverFromKO()
-    {
-        isKO = false;
     }
 }
