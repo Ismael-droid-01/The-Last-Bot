@@ -33,14 +33,11 @@ public class Player : MonoBehaviour
     {
         if (isKO)
         {
-            // Bloquea movimiento y salto
-            Debug.Log("Hola estoy bloqueado");
+            // Bloquea movimiento y salto;
             rbd2D.linearVelocity = Vector2.zero;
             return;
         }
 
-
-        Debug.Log("KO ya fue llamado");
         move = Input.GetAxisRaw("Horizontal");
         rbd2D.linearVelocity = new Vector2(move * speed, rbd2D.linearVelocity.y);
 
@@ -66,7 +63,6 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Hammer") || collision.CompareTag("Entry"))
         {
-            Debug.Log("Hola desde KO activado");
             animator.SetTrigger("KO");
             isKO = true;
 
@@ -81,12 +77,16 @@ public class Player : MonoBehaviour
                 textLives.text = lives.ToString();
             }
         }
+
+        if (collision.CompareTag("Finish"))
+        {
+            Debug.Log("Ha llegado al final");
+        }
     }
 
     // Llamar desde el final de la animación KO
     public void RecoverFromKO()
     {
-        Debug.Log("Hola desde el final de KO");
         isKO = false;
     }
 }
